@@ -1,11 +1,14 @@
 <div class="cart-container">
+  <div *ngIf="checkEmpty()">
+    <h3>cart is empty</h3>
+  </div>
   <div >
-    <div class="cart-item">
+    <div class="cart-item" *ngIf="!checkEmpty()">
         <app-cart-item  *ngFor="let c of cartItem " [cartItem]=c></app-cart-item>
         <h3>Total Cost:{{calculateTotalCost().toFixed(3)}}</h3>
     </div>
     <div >
-      <form #form="ngForm" class="formContainer" (ngSubmit)=submitForm()>
+      <form #form="ngForm" class="formContainer" (ngSubmit)=submitForm() *ngIf="!checkEmpty()">
           <div >
               <div><label for='fname'><span>First Name:</span></label></div>
               <div><input type="text" name="name" required minlength="3" [(ngModel)]="name"
@@ -26,7 +29,7 @@
                       [(ngModel)]="creditCardNumber" placeholder="ex:123-456-789" />
               </div>
           </div>
-          <input type="submit" [disabled]="form.invalid" value="Submit" class="submit">
+          <input type="submit" [disabled]="form.invalid" value="check out" class="submit">
       </form>
   </div>
 </div>

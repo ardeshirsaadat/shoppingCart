@@ -53,4 +53,14 @@ export class FetchCartService {
   getUserinfo() {
     return [this.userInfo.fullName, this.userInfo.total]
   }
+
+  removeItemService(id: number) {
+    this.cart.map((p, index) => {
+      if (p.id == id) {
+        this.cart.splice(index, 1)
+      }
+    })
+  }
+
+
 }

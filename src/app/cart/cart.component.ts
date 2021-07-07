@@ -42,6 +42,14 @@ export class CartComponent implements OnInit {
 
   }
 
+  checkEmpty() {
+    if (this.cartItem.length == 0) {
+      return true
+    }
+    else
+      return false
+  }
+
 }
 
 
