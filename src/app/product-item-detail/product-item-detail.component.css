@@ -1,0 +1,49 @@
+img {
+  border-radius: 10px;
+  width: 320px;
+}
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.detail-item {
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.back-link {
+  margin-top: 8px;
+}
+button {
+  display: inline-block;
+  background-color: #38a5d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+p {
+  display: inline;
+}
+
+ul {
+  list-style: none;
+}

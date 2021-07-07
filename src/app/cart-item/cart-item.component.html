@@ -1,0 +1,12 @@
+<div class="product-container">
+  <div><img  class="product-image" src={{cartItem.product_url}} /></div>
+  <div>
+      <ul>
+          <li>{{cartItem.product_name}}</li>
+          <li><span>Price: $</span>{{cartItem.product_price_single.toFixed(2)}}</li>
+          <li><span>Amount: </span><input type="number" name="amount" [(ngModel)]="amount"
+                  (ngModelChange)=changeQuantity(cartItem,amount)></li>
+      </ul>
+      <button (click)="removeItem(cartItem)">Remove</button>
+  </div>
+</div>

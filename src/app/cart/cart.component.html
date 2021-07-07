@@ -1,0 +1,33 @@
+<div class="cart-container">
+  <div >
+    <div class="cart-item">
+        <app-cart-item  *ngFor="let c of cartItem " [cartItem]=c></app-cart-item>
+        <h3>Total Cost:{{calculateTotalCost().toFixed(3)}}</h3>
+    </div>
+    <div >
+      <form #form="ngForm" class="formContainer" (ngSubmit)=submitForm()>
+          <div >
+              <div><label for='fname'><span>First Name:</span></label></div>
+              <div><input type="text" name="name" required minlength="3" [(ngModel)]="name"
+                      placeholder="min 4 characters" />
+              </div>
+          </div>
+
+          <div>
+              <div><label for='address'><span>Address:</span></label></div>
+              <div><input type="text" name="address" required minlength="6" [(ngModel)]="address"
+                      placeholder="min 5 characters" />
+              </div>
+          </div>
+          <div>
+              <div><label for='cardNumber'><span>Credit card number:</span></label>
+              </div>
+              <div><input type="text" name="cardnumber" required minlength="16" maxlength="16"
+                      [(ngModel)]="creditCardNumber" placeholder="ex:123-456-789" />
+              </div>
+          </div>
+          <input type="submit" [disabled]="form.invalid" value="Submit" class="submit">
+      </form>
+  </div>
+</div>
+</div>
