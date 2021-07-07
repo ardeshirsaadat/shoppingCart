@@ -10,7 +10,7 @@
     <div >
       <form #form="ngForm" class="formContainer" (ngSubmit)=submitForm() *ngIf="!checkEmpty()">
           <div >
-              <div><label for='fname'><span>First Name:</span></label></div>
+              <div><label for='name'><span>First Name:</span></label></div>
               <div><input type="text" name="name" required minlength="3" [(ngModel)]="name"
                       placeholder="min 4 characters" />
               </div>
@@ -23,9 +23,9 @@
               </div>
           </div>
           <div>
-              <div><label for='cardNumber'><span>Credit card number:</span></label>
+              <div><label for='creditCardNumber'><span>Credit card number:</span></label>
               </div>
-              <div><input type="text" name="cardnumber" required minlength="16" maxlength="16"
+              <div><input type="text" name="creditCardNumber" required minlength="16" maxlength="16"
                       [(ngModel)]="creditCardNumber" placeholder="ex:123-456-789" />
               </div>
           </div>
