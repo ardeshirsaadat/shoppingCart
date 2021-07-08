@@ -31,6 +31,7 @@ export class CartItemComponent implements OnInit {
 
   removeItem(cartItem: CartItem) {
     this.fetchCartService.removeItemService(cartItem.id)
+    alert("item is removed from cart")
   }
 
 }

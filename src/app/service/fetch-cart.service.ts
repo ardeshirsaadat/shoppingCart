@@ -23,8 +23,13 @@ export class FetchCartService {
   }
 
   addToCartService(cartitem: CartItem) {
+    let tempCart = this.cart.filter(item => item.id == cartitem.id)
+    if (tempCart.length == 0) {
+      this.cart.push(cartitem)
+    } else {
+      this.changeQuantityService(cartitem.id, cartitem.product_quantity)
+    }
 
-    this.cart.push(cartitem)
 
   }
 
