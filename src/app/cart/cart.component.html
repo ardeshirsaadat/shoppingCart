@@ -25,12 +25,18 @@
           <div>
               <div><label for='creditCardNumber'><span>Credit card number:</span></label>
               </div>
-              <div><input type="text" name="creditCardNumber" required minlength="16" maxlength="16"
-                      [(ngModel)]="creditCardNumber" placeholder="ex:123-456-789" />
+              <div><input  type="text" name="creditCardNumber" required minlength="16" maxlength="16"
+                      [(ngModel)]="creditCardNumber" placeholder="ex:123456789" #credit="ngModel" />
               </div>
+              <div *ngIf="credit.invalid && credit.dirty ">
+                <div *ngIf="credit.errors" [ngStyle]="{'background-color':'red'}">
+                  credit card is not valid
+                </div>
+            </div>
           </div>
           <input type="submit" [disabled]="form.invalid" value="check out" class="submit">
       </form>
+      
   </div>
 </div>
 </div>

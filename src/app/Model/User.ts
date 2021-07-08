@@ -1,13 +1,13 @@
 export class User {
   fullName: string
   address: string
-  creditCard: string
+  creditCard: number
   total: number
 
   constructor() {
     this.address = ''
     this.fullName = ''
-    this.creditCard = ''
+    this.creditCard = 0
     this.total = 0
   }
 }

@@ -11,7 +11,7 @@ export class FetchCartService {
   userInfo: User = {
     fullName: '',
     address: '',
-    creditCard: '',
+    creditCard: 0,
     total: 0
   }
   constructor() {

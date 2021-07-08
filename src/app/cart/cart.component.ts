@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   cartItem: CartItem[] = []
   name: string = ''
   address: string = ''
-  creditCardNumber: string = ''
+  creditCardNumber: number = 0
 
   constructor(private fetchCartService: FetchCartService, private router: Router) {
 
